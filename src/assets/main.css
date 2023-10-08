@@ -1,0 +1,36 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (hover: hover) {
+ 
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@font-face {
+  font-family: 'Monaco';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Monaco'), url('src/assets/Monaco.woff') format('woff');
+}
+
+h1 {
+  font-family: 'Monaco';
+  color: white;
+}
+
+h2 {
+  font-family: 'Monaco';
+  color: white;
+}
+
+p {
+  font-family: 'Monaco';
+  color: white;
+}
