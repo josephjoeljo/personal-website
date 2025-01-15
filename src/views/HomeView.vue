@@ -1,175 +1,100 @@
 <template>
-  <div class="wrapper">
-    <div class="info">
-      <img src="src/assets/profile.jpeg" class="profile"/>
-      <div class="links">
-      <div class="social-links">
-        <div class="social" @click="navigateToMail"> <p>M</p> </div>
-        <div class="social" @click="navigateToGithub"> <p>G</p> </div>
-        <div class="social" @click="navigateToX"> <p>X</p> </div>
-      </div>
-      <div class="resume" @click="downloadResume"> <p>Resume</p> </div>
-    </div>
-    </div>
-    <div class="bio">
-      <h2 class="title">About Me</h2>
-      <p class="text">Born in Haiti, I’ve always loved figuring out how things worked. This put me at a crossroads with my parents as I would break down many of the gadgets/toys I was interested in around the house.
-My parents moved to the United States in 2005, and in 2010 my little brother and I joined them in Connecticut.
-I had my first exposure to a desktop computer then, my parents did not know how to set it up. So, I took it apart and then put it back together. And ever since, I knew that I wanted to be a computer scientist.
-I started working on video games early on, I was the engineer, and my little brother was the artist. I then took an AP computer science class at my school; this reinforced my drive to dive deeper into computer science.
-I graduated from Brigham Young University with a Bachelor of Science in computer science. I worked on many projects and even participated in computer vision research. I am grateful and learned much. I love computer science; however, I am deeply involved in machine learning, deep learning, systems engineering, mobile development, and software engineering.
-I speak 5 languages, and I love working on cars.</p>
-    </div>
-  </div>
+	<div id="home-view">
+
+		<!-- Profile -->
+		<div id="profile">
+			<img src="../assets/profile.jpeg" class="profile"/>
+
+			<div id="links">
+				<div class="link">
+					<Label text="X" color="#19A026"/>
+					<a class="label" href="https://x.com/josephjoeljo">@josephjoeljo</a>
+				</div>
+
+				<div class="link">
+					<Label text="in" color="#5073DC"/>
+					<a class="label" href="https://www.linkedin.com/in/joel-j-52261a101/">joel-j-52261a101</a>
+				</div>
+
+				<div class="link">
+					<Label text="Github" color="#E63939"/>
+					<a class="label" href="https://github.com/josephjoeljo">josephjoeljo</a>
+				</div>
+
+				<div class="link">
+					<Label text="Email" color="#D0C119"/>
+					<div class="label" @click="navigateToMail">joeljordanjoseph@gmail.com</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Me -->
+		<div id="about">
+			<h1>:About Me</h1>
+			<p>
+				I was born in Haiti with an insatiable curiosity about how things work. This natural inclination often led me to disassemble gadgets and toys around the house—a habit that both frustrated and intrigued my parents.
+				<br>
+				<br>
+				I earned a Bachelor of Science in Computer Science from Brigham Young University, where I worked on a variety of projects and contributed to computer vision research. While I love all areas of computer science, I am especially passionate about data-driven projects, machine learning, and systems engineering.
+				<br>
+				<br>
+				Outside of my professional interests, I am polyglot and a car enthusiast who enjoys working on vehicles in my free time. These pursuits reflect my lifelong love for learning, problem-solving, and creating—values that guide both my personal and professional journey.
+			</p>
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
+import Label from '@/components/Label.vue'
+
 function navigateToMail() {
-  document.location = 'mailto:joeljordanjoseph@gmail.com'
-}
-
-function navigateToGithub() {
-  window.location = 'https://github.com/NokoAnubis'
-}
-
-function navigateToX() {
-  window.location = 'https://twitter.com/josephjoeljo'
+	document.location = 'mailto:joeljordanjoseph@gmail.com'
 }
 
 function downloadResume() {
-  window.open('src/assets/Resume.pdf')
+	window.open('src/assets/Resume.pdf')
 }
 </script>
 
 <style scoped>
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  margin: 5rem 0rem;
-}
-.info {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5rem;
-  align-items: center;
+#home-view {
+	display: flex;
+	background-color: white;
+	height: calc(100vh - 50px);
 
-  .profile {
-    width: 25rem;
-    height: 30rem;
-    object-fit: cover;
-  }
-  
-  .links {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+	#profile {
+		margin: 2rem;
 
-  .social-links {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3rem;
-    justify-content: space-around;
-  }
+		img {
+			max-width: 20rem;
+		}
 
-  .social {
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    cursor: grab;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    border: 0.5px solid white;
-  }
+		#links {
+			.link {
+				display: flex;
+				margin: 0.5rem;
 
-  .resume {
-    width: 90%;
-    margin-top: 2rem;
-    height: 4rem;
-    cursor: grab;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5px solid white;
-  }
-}
+				.label {
+					color: black;
+					cursor: pointer;
+					margin-left: 0.5rem;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 
-.bio {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5rem;
-  .title {
-    text-decoration: underline;
-  }
-  .text {
-    width: 60%;
-    margin-top: 2rem;
-  }
-}
+	#about {
+		margin: 3rem;
 
-@media (max-width: 1200px) {
-  .bio {
-    .text {
-      width: 85%;
-    }
-  }
-}
+		h1 {
+			color: black;
+		}
 
-@media (max-width: 950px) {
-  .wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .info {
-    align-items: center;
-    margin: 0;
-  }
-  .links {
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .social-links {
-    display: flex;
-    flex-direction: row;
-    margin-top: 3rem;
-    justify-content: space-around;
-  }
-  .social {
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    cursor: grab;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    border: 0.5px solid white;
-  }
-  .resume {
-    width: 90%;
-    margin-top: 2rem;
-    height: 4rem;
-    cursor: grab;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5px solid white;
-  }
-  .bio {
-    align-items: center;
-    margin: 0;
-    width: 80%;
-    text-align: center;
-  }
-  .title {
-    margin-top: 2rem;
-  }
+		p {
+			margin: 1rem 0rem 0rem 2rem;
+			color: black;
+		}
+	}
 }
 </style>
