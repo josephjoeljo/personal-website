@@ -59,6 +59,7 @@ function downloadResume() {
 <style scoped>
 #home-view {
 	display: flex;
+	overflow-y: scroll;
 	background-color: white;
 	height: calc(100vh - 50px);
 
@@ -94,6 +95,26 @@ function downloadResume() {
 		p {
 			margin: 1rem 0rem 0rem 2rem;
 			color: black;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	#home-view {
+		flex-direction: column;
+
+		#profile {
+			margin: auto;
+			margin-top: 2rem;
+			width: fit-content;
+		}
+
+		#about {
+			margin: 1.5rem;
+
+			p {
+				margin: 0.5rem 0rem 0rem 1rem;
+			}
 		}
 	}
 }
