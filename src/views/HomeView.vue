@@ -32,13 +32,13 @@
 		<div id="about">
 			<h1>:About Me</h1>
 			<p>
-				I was born in Haiti with an insatiable curiosity about how things work. This natural inclination often led me to disassemble gadgets and toys around the house—a habit that both frustrated and intrigued my parents.
+				I was born in Haiti with an insatiable curiosity about how things work. This natural inclination often led me to disassemble gadgets and toys around the house, a habit that both frustrated and intrigued my parents.
 				<br>
 				<br>
 				I earned a Bachelor of Science in Computer Science from Brigham Young University, where I worked on a variety of projects and contributed to computer vision research. While I love all areas of computer science, I am especially passionate about data-driven projects, machine learning, and systems engineering.
 				<br>
 				<br>
-				Outside of my professional interests, I am polyglot and a car enthusiast who enjoys working on vehicles in my free time. These pursuits reflect my lifelong love for learning, problem-solving, and creating—values that guide both my personal and professional journey.
+				Outside of my professional interests, I am polyglot and a car enthusiast who enjoys working on my vehicle when I have the time from my personal projects. These pursuits reflect my lifelong love for learning, problem-solving, and creating values that guide both my personal and professional journey.
 			</p>
 		</div>
 	</div>
@@ -59,9 +59,10 @@ function downloadResume() {
 <style scoped>
 #home-view {
 	display: flex;
+	margin: 0 auto;
+	max-width: 80rem;
 	overflow-y: scroll;
-	background-color: white;
-	height: calc(100vh - 50px);
+	height: calc(100dvh - 50px);
 
 	#profile {
 		margin: 2rem;
@@ -76,10 +77,10 @@ function downloadResume() {
 				margin: 0.5rem;
 
 				.label {
-					color: black;
 					cursor: pointer;
 					margin-left: 0.5rem;
 					text-decoration: none;
+					color: var(--color-text);
 				}
 			}
 		}
@@ -88,13 +89,8 @@ function downloadResume() {
 	#about {
 		margin: 3rem;
 
-		h1 {
-			color: black;
-		}
-
 		p {
 			margin: 1rem 0rem 0rem 2rem;
-			color: black;
 		}
 	}
 }

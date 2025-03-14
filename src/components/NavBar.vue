@@ -16,19 +16,20 @@
     width: 100%;
     height: 50px;
     display: flex;
-    background-color: white;
-    border-bottom: solid 2px black;
+    background-color: var(--color-background);
+    border-bottom: solid 2px var(--color-background-soft);
 
     .logo {
+        color: var(--text-color);
         text-decoration: none !important;
     }
 
     h1 {
-        color: black;
         font-size: 1rem;
         line-height: 2rem;
+        color: var(--text-color);
         text-transform: uppercase;
-        margin: 0.5rem 0rem 0.5rem 1rem;
+        margin: 0.5rem 0rem 0.5rem 3rem;
         text-decoration: none !important;
     }
 
@@ -39,9 +40,9 @@
         flex-direction: row;
 
         a {
-            color: black;
             margin: 0rem 1.5rem;
             text-decoration: none;
+            color: var(--text-color);
         }
     }
 }

@@ -16,6 +16,6 @@ defineProps({
     color: white;
     width: fit-content;
     padding: 0rem 0.25rem;
-    border: solid 1px black;
+    border: solid 1px var(--color-text);
 }
 </style>

@@ -12,12 +12,13 @@ import NavBar from './components/NavBar.vue';
 
 <style scoped>
 .main {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	background-color: var();
 }
 
 @media (min-width: 1024px) {
